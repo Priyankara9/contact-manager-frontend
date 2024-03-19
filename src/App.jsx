@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./component/common/NavBar";
 import ViewAll from "./component/viewAllContacts/ViewAll";
+import AddContact from "./component/addContact/AddContact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -30,11 +32,16 @@ function App() {
         </div>
       </div>
 
-      <div className="row  row-2">
-        <div className="col">
-          <ViewAll contacts={contacts} />
+      <Router>
+        <div className="row  row-2">
+          <div className="col">
+            <Routes>
+              <Route path="/" element={<ViewAll contacts={contacts} />} />
+              <Route path="/add-contact" element={<AddContact />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </Router>
     </div>
   );
 }
