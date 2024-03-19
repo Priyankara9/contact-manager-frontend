@@ -1,9 +1,7 @@
-import { useState ,useEffect} from 'react'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import NavBar from './component/common/NavBar';
-import ViewAll from './component/viewAllContacts/ViewAll';
+import { useState, useEffect } from "react";
+import "./App.css";
+import NavBar from "./component/common/NavBar";
+import ViewAll from "./component/viewAllContacts/ViewAll";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -25,18 +23,20 @@ function App() {
   }, []);
 
   return (
-    <>
-      <NavBar/>
-      <div>
-      <div className='table-size'>
-         <ViewAll contacts={contacts} />
+    <div className="container-fluid size m-0 ">
+      <div className="row  row-1">
+        <div className="col">
+          <NavBar />
+        </div>
       </div>
-      </div>
-      
-      
 
-    </>
-  )
+      <div className="row  row-2">
+        <div className="col">
+          <ViewAll contacts={contacts} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
