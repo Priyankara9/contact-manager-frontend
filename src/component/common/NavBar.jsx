@@ -11,10 +11,10 @@ export default function NavBar() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link " aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">View All Contact</a>
+                <a className="nav-link active" href="#">View All Contact</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link " aria-disabled="true">Add Contacts</a>

@@ -1,12 +1,11 @@
 import React from 'react';
 import './ViewAll.css'
-function  ViewAll(contacts){
-
+function  ViewAll({contacts}){
 
 
     return (
         <>
-        <table>
+        <table className="table table-striped ">
       <thead>
         <tr>
           <th>Name</th>
